@@ -1,6 +1,6 @@
 # Hello there; welcome 👋🏾
 
- [![Website Badge](https://img.shields.io/badge/-bolajiayodeji.com-000000?style=for-the-badge&logo=Google-Chrome&logoColor=white&link=https://tuhamworld.com)](https://tuhamworld.com) [![Linkedin Badge](https://img.shields.io/badge/-iambolajiayo-blue?style=for-the-badge&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tuhamworld)](https://www.linkedin.com/in/tuhamworld) [![Twitter Badge](https://img.shields.io/badge/-@iambolajiayo-1ca0f1?style=for-the-badge&logo=twitter&logoColor=white&link=https://twitter.com/tuhamworld)](https://twitter.com/tuhamworld)
+ [![Website Badge](https://img.shields.io/badge/-tuhamworld.com-000000?style=for-the-badge&logo=Google-Chrome&logoColor=white&link=https://tuhamworld.com)](https://tuhamworld.com) [![Linkedin Badge](https://img.shields.io/badge/-tuhamworld-blue?style=for-the-badge&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tuhamworld)](https://www.linkedin.com/in/tuhamworld) [![Twitter Badge](https://img.shields.io/badge/-@tuhamworld-1ca0f1?style=for-the-badge&logo=twitter&logoColor=white&link=https://twitter.com/tuhamworld)](https://twitter.com/tuhamworld)
 
 Tunde Abdulhamid Sanusi is a Frontend Engineer, Creative, Content Creator, WordPress Consultant, and an Internet Scientist. I'm passionate about web technologies and building online presence for business owners via smart optimized websites. My professional field and daily activities mostly align with SDG Goal 8: promoting sustainable economic growth by helping business owners thrive.
 
