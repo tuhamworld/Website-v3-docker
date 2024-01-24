@@ -1,0 +1,16 @@
+.scroll__down {
+  position: absolute;
+  right: 5rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+// Media Queries
+
+@media screen and (max-width: 600px) {
+  .scroll__down {
+    display: none;
+  }
+}
