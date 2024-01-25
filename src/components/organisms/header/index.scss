@@ -13,6 +13,10 @@ header {
     font-weight: bold;
   }
 
+  h1{
+    font-size: 2rem;
+  }
+
   // Media Queries
   @media screen and (max-width: 1024px) {
     height: 68vh;

@@ -18,20 +18,23 @@ const Socials = () => {
 
       <a href="https://github.com/tuhamworld" target="_blank" rel="noreferrer">
         <FaGithub />
-          </a>
-          
-          <a href="https://udemy.com/user/tunde-sanusi/" target="_blank" rel="noreferrer">
-              <SiUdemy/>
-          </a>
+      </a>
 
+      <a
+        href="https://udemy.com/user/tunde-sanusi/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <SiUdemy />
+      </a>
 
-
-          <a href="https://youtube.com/@tuhamworld" target="_blank" rel="noreferrer">
-              <FaSquareYoutube/>
-          </a>
-
-          
-
+      <a
+        href="https://youtube.com/@tuhamworld"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <FaSquareYoutube />
+      </a>
     </div>
   );
 };
