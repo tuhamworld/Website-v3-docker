@@ -70,7 +70,7 @@ const Experience = () => {
 
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
-                <h4>Vercek</h4>
+                <h4>Vercel</h4>
               </article>
 
               <article className="experience__details">
