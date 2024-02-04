@@ -126,7 +126,8 @@ const data = [
     img: MSSNFUTA,
     description:
       "An islamic non-profit organization meant to cater for the welfare of Muslim students on Campus",
-    technologies: "Pixel-Perfect | File-sharing | Contact Automation | WordPress, CMS ",
+    technologies:
+      "Pixel-Perfect | File-sharing | Contact Automation | WordPress, CMS ",
     link: "https://mssnfuta.com/",
   },
 ];

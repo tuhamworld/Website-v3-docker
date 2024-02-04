@@ -1,10 +1,10 @@
 import React from "react";
-import data from "../../data";
+import portfolio from "../../data/portfolio";
 
 import "./index.scss";
 
 const Portfolio = () => {
-  const singleProjects = data;
+  const singleProjects = portfolio;
 
   return (
     <section id="portfolio">

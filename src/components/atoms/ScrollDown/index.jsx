@@ -3,7 +3,7 @@ import "./index.scss";
 
 const ScrollDown = () => {
   return (
-    <a href="contact" className="scroll__down">
+    <a href="#contact" className="scroll__down">
       Scroll Down
     </a>
   );
