@@ -1,5 +1,5 @@
 import React from "react";
-import image from "../../../assets/images/webp/tuham.webp";
+import image from "../../../assets/images/pngs/tuham.png";
 import { FaAward } from "react-icons/fa";
 import { VscFolderLibrary } from "react-icons/vsc";
 import "./index.scss";
