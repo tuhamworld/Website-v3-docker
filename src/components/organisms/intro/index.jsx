@@ -1,5 +1,5 @@
 import React from "react";
-// import image from "../../../assets/images/pngs/tuham.png";
+import image from "../../../assets/images/pngs/tuham.png";
 import { FaAward } from "react-icons/fa";
 import { VscFolderLibrary } from "react-icons/vsc";
 import "./index.scss";
@@ -13,7 +13,7 @@ const Intro = () => {
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
-            <img src="../../../assets/images/pngs/tuham.png" alt="Tunde  Sanusi" />
+            <img src={image} alt="Tunde  Sanusi" />
           </div>
         </div>
         <div className="about__content">
