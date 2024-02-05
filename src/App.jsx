@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Topbar from "./components/molecules/Topbar";
 import Header from "./components/organisms/header";
 import Intro from "./components/organisms/Intro";
