@@ -22,6 +22,22 @@ const data = [
     role: "Chief Editor, Sojworld",
     test: "Tunde is responsive to urgent technical issues as it affects our project, and go extra to empathise with us when we had challenges on our website.",
   },
+  
+  {
+    id: 4,
+    link: "#",
+    name: "Sallyanne G",
+    role: "Limisha Training, UK",
+    test: "Excellent service. My connection was poor so had to keep asking him to repeat which he did. Couldn’t praise him enough. 5 stars 🌟🌟🌟🌟🌟",
+  },
+  {
+    id: 3,
+    link: "#",
+    name: "Phoebe C.",
+    role: "Business owner from Digital Boost, UK",
+    test: "Tunde is an excellent mentor - he was patient, friendly, and a WordPress pro. Thank you so much for your time Tunde.",
+  },
+
 ];
 
 export default data;
