@@ -7,7 +7,7 @@ const CTA = () => {
     <div className="cta">
       <Button text="Download Resume" link="https://drive.google.com/file/d/15RubH_ahf8FQ3epeaCY6DW8kuR2zYRmC/view?usp=sharing" className="btn" />
 
-      <Button text="Let's talk" link="#contact" className="btn btn-primary" />
+      <Button text="Work with Me" link="https://selar.co/booking-session" className="btn btn-primary"/>
     </div>
   );
 };
