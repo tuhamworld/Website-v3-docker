@@ -26,12 +26,10 @@ const Experience = () => {
                 <h4>SCSS</h4>
               </article>
 
-
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
                 <h4>JavaScript</h4>
               </article>
-
 
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
@@ -51,6 +49,11 @@ const Experience = () => {
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
                 <h4>WordPress, CMS</h4>
+              </article>
+
+              <article className="experience__details">
+                <IoIosCheckmarkCircle className="experience__details-icon" />
+                <h4>Gutenberg Block Editor</h4>
               </article>
 
               <article className="experience__details">
@@ -93,15 +96,10 @@ const Experience = () => {
                 <h4>Online Presence</h4>
               </article>
 
-            
-             
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
                 <h4>Web Accessibility</h4>
               </article>
-
-
-
             </div>
           </div>
         </div>
