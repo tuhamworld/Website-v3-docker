@@ -63,7 +63,7 @@ const Experience = () => {
 
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
-                <h4>Version Control</h4>
+                <h4>Git</h4>
               </article>
 
               <article className="experience__details">
