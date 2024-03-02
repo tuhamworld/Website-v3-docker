@@ -48,6 +48,16 @@ const Experience = () => {
 
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
+                <h4>Hosting</h4>
+              </article>
+
+              <article className="experience__details">
+                <IoIosCheckmarkCircle className="experience__details-icon" />
+                <h4>API</h4>
+              </article>
+
+              <article className="experience__details">
+                <IoIosCheckmarkCircle className="experience__details-icon" />
                 <h4>WordPress, CMS</h4>
               </article>
 
@@ -88,7 +98,22 @@ const Experience = () => {
 
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
-                <h4>SEO Jumpstart</h4>
+                <h4>SEO</h4>
+              </article>
+
+              <article className="experience__details">
+                <IoIosCheckmarkCircle className="experience__details-icon" />
+                <h4>FlexBox</h4>
+              </article>
+
+              <article className="experience__details">
+                <IoIosCheckmarkCircle className="experience__details-icon" />
+                <h4>AI</h4>
+              </article>
+
+              <article className="experience__details">
+                <IoIosCheckmarkCircle className="experience__details-icon" />
+                <h4>Responsive</h4>
               </article>
 
               <article className="experience__details">
