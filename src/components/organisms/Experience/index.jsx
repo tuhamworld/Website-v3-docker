@@ -93,17 +93,12 @@ const Experience = () => {
 
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
-                <h4>Figma for UI/UX</h4>
+                <h4>Figma, XD</h4>
               </article>
 
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
                 <h4>SEO</h4>
-              </article>
-
-              <article className="experience__details">
-                <IoIosCheckmarkCircle className="experience__details-icon" />
-                <h4>FlexBox</h4>
               </article>
 
               <article className="experience__details">
