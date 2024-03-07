@@ -67,7 +67,7 @@ const data = [
     img: MemeGenerator,
     description: "A comical web app for generating memes to make your day",
     technologies: "ReactJS | JavaScript | API | Vercel ",
-    link: "https://github.com/tuhamworld/meme-generator",
+    link: "https://de-meme.netlify.app/",
   },
 
   {
