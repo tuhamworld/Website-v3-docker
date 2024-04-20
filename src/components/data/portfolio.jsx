@@ -10,6 +10,7 @@ import TheGreenFashion from "../../assets/images/jpgs/thegreenfashion.jpg";
 import ElivaitAcademy from "../../assets/images/pngs/elivait_academy.png";
 import MSSNFUTA from "../../assets/images/pngs/mssnfuta.png";
 import BanSchool from "../../assets/images/jpgs/ban-school.jpg";
+import ReactFacts from "../../assets/images/pngs/ReactFacts.png"
 
 const data = [
   {
@@ -47,7 +48,7 @@ const data = [
     img: ACareReview,
     description:
       "An educational website which provide reviews of  universities in West Africa",
-    technologies: "JavaScript | SCSS | JS Components | CSS3",
+    technologies: "JavaScript | SCSS | CSS3",
     link: "https://acarereview.vercel.app/",
   },
 
@@ -57,7 +58,7 @@ const data = [
     img: TheGreenFashion,
     description:
       "A notable source for all eco-friendly and sustainable arts and crafts - art pieces, shoes, bags, and accessories from what is considered “waste”.",
-    technologies: "WordPress, CMS | CSS3 | Pixel-perfect | CSS3 | Elementor ",
+    technologies: "WordPress, CMS | CSS3 | Pixel-perfect ",
     link: "https://thegreenfashion.org/",
   },
 
@@ -82,12 +83,12 @@ const data = [
 
   {
     id: 8,
-    title: "DynaCare",
-    img: DynacareHealth,
+    title: "React Facts",
+    img: ReactFacts,
     description:
-      "An NDIS and TAC Registered Provider, founded by a team of experienced Medical professionals and Personal Care workers to deliver person-centred care.",
-    technologies: "WordPress | Pixel-Perfect | CSS3 | SEO ",
-    link: "https://dynacare.net.au/",
+      "Discover Amazing Facts about ReactJS including when it was released, how many stars it has, creator and maintainer. This project also featured a theme toggle button",
+    technologies: "ReactJS | Props | Theme Style switcher ",
+    link: "https://react-facts-one.vercel.app/",
   },
 
   {
@@ -106,7 +107,7 @@ const data = [
     img: ElivaitAcademy,
     description:
       "Elivait Academy is an elearning platform that empower people to learn vocational, technical, digital and soft skills",
-    technologies: "LMS | Payment Integration | API | eCommerce ",
+    technologies: "LMS | eCommerce | WordPress ",
     link: "https://elivait.com.ng/",
   },
 

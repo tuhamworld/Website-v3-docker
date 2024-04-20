@@ -36,20 +36,12 @@ const Experience = () => {
                 <h4>ReactJS</h4>
               </article>
 
-              <article className="experience__details">
-                <IoIosCheckmarkCircle className="experience__details-icon" />
-                <h4>Firebase</h4>
-              </article>
 
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
                 <h4>ES6</h4>
               </article>
 
-              <article className="experience__details">
-                <IoIosCheckmarkCircle className="experience__details-icon" />
-                <h4>Hosting</h4>
-              </article>
 
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
@@ -63,7 +55,7 @@ const Experience = () => {
 
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
-                <h4>Gutenberg Block Editor</h4>
+                <h4>GenAI Foundations</h4>
               </article>
 
               <article className="experience__details">
@@ -99,16 +91,6 @@ const Experience = () => {
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
                 <h4>SEO</h4>
-              </article>
-
-              <article className="experience__details">
-                <IoIosCheckmarkCircle className="experience__details-icon" />
-                <h4>AI</h4>
-              </article>
-
-              <article className="experience__details">
-                <IoIosCheckmarkCircle className="experience__details-icon" />
-                <h4>Responsive</h4>
               </article>
 
               <article className="experience__details">
