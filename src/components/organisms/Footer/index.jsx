@@ -5,6 +5,7 @@ import "./index.scss";
 
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer>
       <a href="#home" className="footer__logo">
@@ -33,7 +34,7 @@ const Footer = () => {
           </ul>
           
           <div className="footer__copyright">
-              <small>&copy; 2023. All rights reserved. </small>
+              <small>&copy; {currentYear}. All rights reserved. </small>
           </div>
     </footer>
   );
