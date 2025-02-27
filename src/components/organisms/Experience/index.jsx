@@ -50,7 +50,7 @@ const Experience = () => {
 
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
-                <h4>WordPress, CMS</h4>
+                <h4>WordPress</h4>
               </article>
 
               <article className="experience__details">
@@ -60,7 +60,7 @@ const Experience = () => {
 
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
-                <h4>Google Blogger, CMS</h4>
+                <h4>Google Blogger</h4>
               </article>
 
               <article className="experience__details">
@@ -100,7 +100,7 @@ const Experience = () => {
 
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
-                <h4>Web Accessibility</h4>
+                <h4>Styled Components</h4>
               </article>
             </div>
           </div>

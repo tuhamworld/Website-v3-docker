@@ -1,5 +1,6 @@
 import React from "react";
 import image from "../../../assets/images/pngs/tuham.png";
+import tuhamImage from "../../../assets/images/jpgs/Tunde Abdulhamid Sanusi-Tuham.jpg";
 import { FaAward } from "react-icons/fa";
 import { VscFolderLibrary } from "react-icons/vsc";
 import "./index.scss";
@@ -13,7 +14,7 @@ const Intro = () => {
       <div className="container about__container">
         <div className="about__me">
           <div className="about__me-image">
-            <img src={image} alt="Tunde  Sanusi" />
+            <img src={tuhamImage} alt="Tunde Abdulhamid Sanusi" />
           </div>
         </div>
         <div className="about__content">
@@ -31,14 +32,9 @@ const Intro = () => {
           </div>
 
           <p>
-            Front-end engineer, driven by 2 years of continous learning and building, and over 5 years in the field of Web Creation.
-            <br />
-
-            I am passionate about crafting user-centric interfaces that empower users and bring ideas to life:
+            Front-end engineer, driven by 2+ years of continous learning and building, and over 5 years in the field of Web Creation.
             <br />
             - Built a portfolio of diverse projects, from single-page apps to interactive web apps.
-            <br />
-            - Developed smart and optimized websites for brands, business owners and organizations.
             <br />
             - Demonstrated strong technical, soft,  and communication skills when working with clients.
           </p>

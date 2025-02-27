@@ -5,7 +5,7 @@ import "./index.scss";
 const CTA = () => {
   return (
     <div className="cta">
-      <Button text="Download Resume" link="https://drive.google.com/file/d/15RubH_ahf8FQ3epeaCY6DW8kuR2zYRmC/view?usp=sharing" className="btn" target={"_blank "} />
+      <Button text="Download CV" link="https://docs.google.com/document/d/17e9ASKpuAB1pbVLTvzbjdkbXAPim9NlMqcAip8xkHIY/edit?usp=sharing" className="btn" target={"_blank "} />
 
       <a href="#contact" className="btn btn-primary">Work with Me</a>
     </div>
