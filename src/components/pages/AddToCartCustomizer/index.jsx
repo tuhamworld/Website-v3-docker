@@ -2,12 +2,17 @@ import React from "react";
 import { FaCheck, FaCoffee } from "react-icons/fa";
 import "./index.scss";
 import eCommerceImage from "../../../assets/images/jpgs/ecommerce-image.jpg";
-import OnlineShopping from "../../../assets/images/jpgs/onlineshopping.jpg"
+import OnlineShopping from "../../../assets/images/jpgs/onlineshopping.jpg";
+import { Helmet } from "react-helmet";
 
 const AddToCartCustomizer = () => {
   return (
+    <div>
+     <Helmet>
+        <title>Add to Cart Link Customizer</title>
+      </Helmet>
     <section className="addtocart-customizer-page">
-      <div className="container">
+            <div className="container">
         <div className="hero-section">
           <h1>AddToCart Customizer WordPress Plugin</h1>
           <p className="subtitle">
@@ -101,6 +106,7 @@ const AddToCartCustomizer = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 
