@@ -28,7 +28,7 @@ const App = () => {
       <Topbar />
       <Routes>
         <Route path="/" element={<MainSections />} />
-        <Route path="/addtocart-customizer" element={<AddToCartCustomizer />} />
+        <Route path="/addtocart-link-customizer" element={<AddToCartCustomizer />} />
       </Routes>
     </>
   );
