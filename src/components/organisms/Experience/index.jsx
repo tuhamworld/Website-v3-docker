@@ -95,12 +95,22 @@ const Experience = () => {
 
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
-                <h4>Online Presence</h4>
+                <h4>Tailwind CSS</h4>
               </article>
 
               <article className="experience__details">
                 <IoIosCheckmarkCircle className="experience__details-icon" />
                 <h4>Styled Components</h4>
+              </article>
+
+              <article className="experience__details">
+                <IoIosCheckmarkCircle className="experience__details-icon" />
+                <h4>Firebase</h4>
+              </article>
+
+              <article className="experience__details">
+                <IoIosCheckmarkCircle className="experience__details-icon" />
+                <h4>TypeScript Foundations</h4>
               </article>
             </div>
           </div>
