@@ -19,8 +19,9 @@ import AirBnbWebsite from "../../assets/images/jpgs/airbnb-features-integration-
 import PicAdjust from "../../assets/images/pngs/picadjust.png";
 import JannatuTravels from "../../assets/images/pngs/jannatutravels.png";
 import Pluttr from "../../assets/images/pngs/pluttr.png";
-import LogPressApp from "../../assets/images/pngs/LogPress-WordPress Companion App.png";
+import LogPressApp from "../../assets/images/jpgs/LogPress-WordPress Companion App.jpg";
 import TuhamMovieApp from "../../assets/images/pngs/Tuham-Movie-App.jpg";
+import PicAdjustApp from "../../assets/images/jpgs/PicAdjust-App.jpg";
 
 const data = [
   {
@@ -166,8 +167,17 @@ const data = [
     img: TuhamMovieApp,
     description:
       "MovieTuhApp lets you explore the latest movies, track trending titles, and dive deep into detailed movie insights including budget, revenue, and user ratings. Whether you’re a casual viewer or a movie enthusiast, this app brings everything you need right to your fingertips.",
-    technologies: "React Native | Appwrite | Mobile App |  ",
+    technologies: "React Native | Appwrite | Mobile App  ",
     link: "https://tuhamplay.vercel.app/app/CiPOJu5ybAvvVLjYT7h5",
+  },
+  {
+    id: 15,
+    title: "PicAdjust Mobile App",
+    img: PicAdjustApp,
+    description:
+      "PicAdjust is your all-in-one image processing solution. We provide powerful tools to compress, convert, optimize and resize your images. Perfect for both personal and professional use.",
+    technologies: "React Native | Mobile App  ",
+    link: "https://tuhamplay.vercel.app/app/d5CQz2TgE3HE6albM7p6",
   },
 ];
 
