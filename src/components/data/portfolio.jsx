@@ -19,7 +19,7 @@ import AirBnbWebsite from "../../assets/images/jpgs/airbnb-features-integration-
 import PicAdjust from "../../assets/images/pngs/picadjust.png";
 import JannatuTravels from "../../assets/images/pngs/jannatutravels.png";
 import Pluttr from "../../assets/images/pngs/pluttr.png";
-import LogPressApp from "../../assets/images/pngs/LogPress-WordPress Companion App.png";
+import LogPressApp from "../../assets/images/pngs/LogPress-WordPress Companion App.jpg";
 import TuhamMovieApp from "../../assets/images/pngs/Tuham-Movie-App.jpg";
 
 const data = [
