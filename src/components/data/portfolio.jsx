@@ -19,6 +19,8 @@ import AirBnbWebsite from "../../assets/images/jpgs/airbnb-features-integration-
 import PicAdjust from "../../assets/images/pngs/picadjust.png";
 import JannatuTravels from "../../assets/images/pngs/jannatutravels.png";
 import Pluttr from "../../assets/images/pngs/pluttr.png";
+import LogPressApp from "../../assets/images/pngs/LogPress-WordPress Companion App.png";
+import TuhamMovieApp from "../../assets/images/pngs/Tuham-Movie-App.jpg";
 
 const data = [
   {
@@ -148,6 +150,24 @@ const data = [
       "An agricultural exports company incorporated in 2006 and began exporting in 2009 such as Ginger, hibiscus, sesame seeds and tiger nuts",
     technologies: "WordPress | SEO | Elementor | HTML5 ",
     link: "https://biizgloserv.com.ng/",
+  },
+  {
+    id: 13,
+    title: "LogPress - WordPress Mobile App",
+    img: LogPressApp,
+    description:
+      "LogPress is a lightweight companion app that helps you stay connected to your WordPress website. With quick access to your dashboard, live site, and video learning resources, LogPress makes managing your site simple and seamless on mobile.",
+    technologies: "React Native | Firebase | Mobile App |  ",
+    link: "https://tuhamworld.com/logpress-app-wordpress-companion/",
+  },
+  {
+    id: 14,
+    title: "Tuham Movie App",
+    img: TuhamMovieApp,
+    description:
+      "MovieTuhApp lets you explore the latest movies, track trending titles, and dive deep into detailed movie insights including budget, revenue, and user ratings. Whether you’re a casual viewer or a movie enthusiast, this app brings everything you need right to your fingertips.",
+    technologies: "React Native | Appwrite | Mobile App |  ",
+    link: "https://tuhamplay.vercel.app/app/CiPOJu5ybAvvVLjYT7h5",
   },
 ];
 
