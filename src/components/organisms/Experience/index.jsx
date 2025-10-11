@@ -112,6 +112,11 @@ const Experience = () => {
                 <IoIosCheckmarkCircle className="experience__details-icon" />
                 <h4>TypeScript Foundations</h4>
               </article>
+
+              <article className="experience__details">
+                <IoIosCheckmarkCircle className="experience__details-icon" />
+                <h4>React Native</h4>
+              </article>
             </div>
           </div>
         </div>
