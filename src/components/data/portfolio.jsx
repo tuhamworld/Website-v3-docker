@@ -22,6 +22,8 @@ import Pluttr from "../../assets/images/pngs/pluttr.png";
 import LogPressApp from "../../assets/images/jpgs/LogPress-WordPress Companion App.jpg";
 import TuhamMovieApp from "../../assets/images/pngs/Tuham-Movie-App.jpg";
 import PicAdjustApp from "../../assets/images/jpgs/PicAdjust-App.jpg";
+import VANTAPP from "../../assets/images/pngs/VantCompany-page.png";
+import FiscoraTech from "../../assets/images/pngs/Fiscora.png";
 
 const data = [
   {
@@ -106,7 +108,7 @@ const data = [
     description:
       "A custom Source and Shipping business website  that enables users to book , and track their shipping orders from 876sourceit ",
     technologies: "WordPress | Elementor | Membership ",
-    link: "https://theinfoworth.com/",
+    link: "https://876sourceit.com/",
   },
 
 
@@ -178,6 +180,24 @@ const data = [
       "PicAdjust is your all-in-one image processing solution. We provide powerful tools to compress, convert, optimize and resize your images. Perfect for both personal and professional use.",
     technologies: "React Native | Mobile App  ",
     link: "https://tuhamplay.vercel.app/app/d5CQz2TgE3HE6albM7p6",
+  },
+   {
+    id: 16,
+    title: "Fiscora Tech Consulting Ltd",
+    img: FiscoraTech,
+    description:
+      "Fiscora aims to deliver cutting-edge IT consulting services and technology solutions that empower businesses to thrive in the digital age.",
+    technologies: "ReactJS  ",
+    link: "https://fiscora.tech",
+  },
+    {
+    id: 17,
+    title: "VANT Company Page",
+    img: VANTAPP,
+    description:
+      "Worked on VANT, a business banking and business management app for African Small and Medium Businesses.",
+    technologies: "ReactJS | TailwindCSS |   ",
+    link: "https://vantapp.com",
   },
 ];
 
