@@ -1,9 +1,3 @@
-# Environment variables - SENSITIVE DATA
-.env
-.env.local
-.env.*.local
-.env.production.local
-
 # Logs
 logs
 *.log
@@ -17,12 +11,6 @@ node_modules
 dist
 dist-ssr
 *.local
-
-# Vercel and build artifacts
-.vercel
-.next
-out
-build
 
 # Editor directories and files
 .vscode/*
