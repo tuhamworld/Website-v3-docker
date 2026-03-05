@@ -1,0 +1,163 @@
+# Project Documentation
+
+## Project Overview
+This is a **portfolio website** built with:
+- **Frontend**: React (Vite) - Modern UI with components for displaying portfolio, testimonials, experience, and a contact form
+- **Backend**: Express.js - REST API server handling contact form submissions and admin functionality
+- **Database**: PostgreSQL - Stores contact messages and admin data
+- **Deployment**: Docker Compose - Containerized application with three services (frontend, backend, database)
+
+## Project Structure
+```
+Website-v2/
+├── frontend/           # React Vite app (port 80)
+├── backend/            # Express.js API (port 5000)
+├── docker-compose.yml  # Orchestrates all services
+├── init.sql           # Database initialization script
+├── .env               # Environment variables
+└── README.md          # Original documentation
+```
+
+## Docker Setup
+
+### How Docker Works
+The `docker-compose.yml` runs three services:
+
+1. **PostgreSQL Database (postgres-db)**
+   - Image: postgres:15
+   - Port: 5432 (internal)
+   - Initializes with `init.sql` on first run
+   - Persists data in `postgres_data` volume
+
+2. **Express Backend (express-backend)**
+   - Builds from `./backend/Dockerfile`
+   - Port: 5000 (exposed)
+   - Connects to database via `db` service name
+   - Runs: `node src/server.js`
+
+3. **React Frontend (react-frontend)**
+   - Builds from `./frontend/Dockerfile`
+   - Port: 80 (exposed)
+   - Served via Nginx
+   - Communicates with backend at `http://backend:5000`
+
+### Environment Variables (.env)
+```
+POSTGRES_HOST=db
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=portfolio_db
+DB_HOST=db
+DB_USER=postgres
+DB_PASSWORD=postgres
+DB_NAME=portfolio_db
+DB_PORT=5432
+PORT=5000
+```
+
+## Commands
+
+### Start the Project
+```bash
+docker-compose up --build
+```
+- Builds all images if needed
+- Starts all three services
+- Remove `-d` flag to see logs in terminal, or add it to run in background
+
+### Stop the Project
+```bash
+docker-compose down
+```
+- Stops and removes all running containers
+- Preserves database volume (`postgres_data`)
+
+### View Logs
+```bash
+# All services
+docker-compose logs -f
+
+# Specific service
+docker-compose logs -f backend
+docker-compose logs -f db
+docker-compose logs -f frontend
+```
+
+### Access Services
+- **Frontend**: http://localhost or http://localhost:80
+- **Backend API**: http://localhost:5000
+- **Database**: localhost:5432 (requires psql client)
+
+## Database
+
+### Check Data in Database
+
+#### Using Docker Compose
+```bash
+docker-compose exec db psql -U postgres -d portfolio_db -c "SELECT * FROM contacts;"
+```
+
+#### Using psql directly (if PostgreSQL is installed locally)
+```bash
+psql -h localhost -U postgres -d portfolio_db -c "SELECT * FROM contacts;"
+# When prompted, enter password: postgres
+```
+
+#### View all contacts with formatted output
+```bash
+docker-compose exec db psql -U postgres -d portfolio_db -c "SELECT id, name, email, created_at FROM contacts ORDER BY created_at DESC;"
+```
+
+#### Delete/Clear contacts (if needed)
+```bash
+docker-compose exec db psql -U postgres -d portfolio_db -c "DELETE FROM contacts;"
+```
+
+### Database Schema
+```sql
+CREATE TABLE contacts (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  message TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+## Troubleshooting
+
+### Database Connection Error
+- Ensure PostgreSQL container is running: `docker ps`
+- Check logs: `docker-compose logs db`
+- Verify .env has correct `POSTGRES_PASSWORD` (must match `DB_PASSWORD`)
+
+### Port Already in Use
+```bash
+# Find process using port 5000
+lsof -i :5000
+
+# Find process using port 80
+lsof -i :80
+
+# Kill process (use PID from above)
+kill -9 <PID>
+```
+
+### Rebuild Everything Fresh
+```bash
+docker-compose down -v  # -v removes volumes (database data)
+docker-compose up --build
+```
+
+## Contact Form Workflow
+1. User fills form on frontend (name, email, message)
+2. Frontend sends POST request to `http://backend:5000/api/contact`
+3. Backend validates data and inserts into PostgreSQL
+4. Returns success/error message to frontend
+5. Check data with: `docker-compose exec db psql -U postgres -d portfolio_db -c "SELECT * FROM contacts;"`
+
+## Notes
+- Database data persists in Docker volume even after `docker-compose down`
+- First run initializes database with `init.sql`
+- All services communicate via Docker network `app-network`
+- Frontend is behind Nginx reverse proxy in Docker
