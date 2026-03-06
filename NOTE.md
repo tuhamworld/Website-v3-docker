@@ -171,3 +171,20 @@ docker-compose up --build
 - **Admin Password**: Stored securely in backend `.env` file (not exposed to frontend)
 - **Authentication**: Server-side validation with token-based auth
 - **API Security**: Admin routes require Bearer token authentication
+
+## Preparing for Public Release
+
+Before pushing this repository to a public server (e.g. GitHub), remove or ignore any files that contain sensitive credentials:
+
+1. **.env files** – both `backend/.env` and `frontend/.env` contain passwords and should *never* be committed. Add the following lines to your `.gitignore` if they are not already there:
+   ```gitignore
+   # environment variables
+   *.env
+   ```
+2. **Docker volumes and data** – do not version control the `postgres_data` volume or any SQL dumps containing real messages.
+3. **Other secrets** – any API keys, personal tokens, or private certificates used during development should be removed or replaced with placeholders.
+
+_NOTE.md itself is safe for public view and contains only configuration instructions; it does not include any private information._
+
+Refer back to this section whenever you make changes that introduce new credentials.
+

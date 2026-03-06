@@ -22,6 +22,7 @@ Tunde Abdulhamid Sanusi is a Frontend Engineer, Creative, Content Creator, WordP
 This repository holds the code for *Website‑v2*, a containerized portfolio application. It demonstrates a 3‑tier architecture with a React frontend, Express backend and PostgreSQL database, all orchestrated with Docker Compose.
 
 > 🔎 **See the full technical documentation** in [NOTE.md](./NOTE.md) before building or deploying the project.
+> ⚠️ Remove any sensitive credential files (e.g. `.env`) or secrets from the repository; details are in NOTE.md.
 
 ### Project Brief
 
