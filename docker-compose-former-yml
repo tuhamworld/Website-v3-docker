@@ -15,7 +15,7 @@ services:
       - app-network
   
   backend:
-    image: tuhamworld/portfolio-backend:1.0
+    build: ./backend
     container_name: express-backend
     restart: always
     env_file:
@@ -28,7 +28,7 @@ services:
       - app-network
   
   frontend:
-    image: tuhamworld/portfolio-frontend:1.0
+    build: ./frontend
     container_name: react-frontend
     restart: always
     environment:
