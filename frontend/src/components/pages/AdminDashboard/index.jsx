@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { adminApi } from '../../../services/adminApi';
 import AdminMessages from '../AdminMessages';
 import './index.scss';
 
@@ -8,19 +9,17 @@ const AdminDashboard = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if user is authenticated
-    const isAuthenticated = localStorage.getItem('adminAuth');
-    if (!isAuthenticated) {
+    // Check if user has a valid admin token
+    const token = localStorage.getItem('adminToken');
+    if (!token) {
       navigate('/admin/login');
     }
   }, [navigate]);
 
   const handleLogout = () => {
-    localStorage.removeItem('adminAuth');
-    localStorage.removeItem('adminLoginTime');
+    adminApi.logout();
     navigate('/admin/login');
   };
-console.log('API base:', import.meta.env.VITE_API_URL);
   return (
     <div className="admin-dashboard">
       <header className="admin-header">

@@ -19,7 +19,18 @@ Tunde Abdulhamid Sanusi is a Frontend Engineer, Creative, Content Creator, WordP
 
 ### Purpose of this Repo
 
-This repo is meant to Dockerizing Website-v2 of my portfolio as a 3-Tier Web App having Frontend, Backend and a Database
+This repository holds the code for *Website‑v2*, a containerized portfolio application. It demonstrates a 3‑tier architecture with a React frontend, Express backend and PostgreSQL database, all orchestrated with Docker Compose.
+
+> 🔎 **See the full technical documentation** in [NOTE.md](./NOTE.md) before building or deploying the project.
+
+### Project Brief
+
+- **Frontend**: React (Vite) served by Nginx
+- **Backend**: Express.js API with contact form and admin panel
+- **Database**: PostgreSQL for storing contact messages
+- **Deployment**: Docker Compose (frontend, backend, db services)
+
+The README focuses on my personal profile and the link above points to the detailed operational guide in NOTE.md.
 
 ---
 | <img align="center" src="https://github-readme-stats.vercel.app/api?username=tuhamworld&show_icons=true&include_all_commits=true&hide_border=true" alt="Tunde's GitHub stats" /> | <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=tuhamworld&langs_count=8&layout=compact&hide_border=true" alt="Tunde's GitHub stats" /> |

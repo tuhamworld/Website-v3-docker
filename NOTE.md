@@ -156,8 +156,18 @@ docker-compose up --build
 4. Returns success/error message to frontend
 5. Check data with: `docker-compose exec db psql -U postgres -d portfolio_db -c "SELECT * FROM contacts;"`
 
-## Notes
-- Database data persists in Docker volume even after `docker-compose down`
-- First run initializes database with `init.sql`
-- All services communicate via Docker network `app-network`
-- Frontend is behind Nginx reverse proxy in Docker
+## Admin Authentication
+- **Password Location**: `backend/.env` - `ADMIN_PASSWORD=hello@world`
+- **Login Endpoint**: `POST /api/admin/login`
+- **Token Verification**: `GET /api/admin/verify` (requires Bearer token)
+- **Messages Access**: `GET /api/messages` (requires Bearer token)
+
+### Change Admin Password
+1. Edit `backend/.env`
+2. Change `ADMIN_PASSWORD=your_new_password`
+3. Rebuild: `docker-compose down && docker-compose up --build -d`
+
+## Security
+- **Admin Password**: Stored securely in backend `.env` file (not exposed to frontend)
+- **Authentication**: Server-side validation with token-based auth
+- **API Security**: Admin routes require Bearer token authentication

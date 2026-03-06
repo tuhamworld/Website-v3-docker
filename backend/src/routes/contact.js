@@ -41,4 +41,48 @@ router.get('/messages', async (req, res) => {
   }
 });
 
+router.post('/admin/login', (req, res) => {
+  const { password } = req.body;
+
+  if (!password) {
+    return res.status(400).json({ success: false, error: 'Password is required' });
+  }
+
+  const adminPassword = process.env.ADMIN_PASSWORD || 'admin123';
+
+  if (password === adminPassword) {
+    // Generate a simple token (in production, use JWT)
+    const token = Buffer.from(`admin:${Date.now()}`).toString('base64');
+    return res.json({
+      success: true,
+      token: token,
+      message: 'Login successful'
+    });
+  } else {
+    return res.status(401).json({ success: false, error: 'Invalid password' });
+  }
+});
+
+router.get('/admin/verify', (req, res) => {
+  const authHeader = req.headers.authorization;
+
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+    return res.status(401).json({ success: false, error: 'No token provided' });
+  }
+
+  const token = authHeader.substring(7); // Remove 'Bearer '
+
+  try {
+    // Simple token verification (in production, use JWT verification)
+    const decoded = Buffer.from(token, 'base64').toString('ascii');
+    if (decoded.startsWith('admin:')) {
+      return res.json({ success: true, valid: true });
+    } else {
+      return res.status(401).json({ success: false, error: 'Invalid token' });
+    }
+  } catch (err) {
+    return res.status(401).json({ success: false, error: 'Invalid token' });
+  }
+});
+
 module.exports = router;

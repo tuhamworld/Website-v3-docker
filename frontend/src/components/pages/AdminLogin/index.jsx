@@ -15,13 +15,11 @@ const AdminLogin = () => {
     setLoading(true);
 
     try {
-      if (adminApi.validateAdminPassword(password)) {
-        // Store auth token in localStorage
-        localStorage.setItem('adminAuth', 'true');
-        localStorage.setItem('adminLoginTime', new Date().getTime());
+      const result = await adminApi.login(password);
+      if (result.success) {
         navigate('/admin/dashboard');
       } else {
-        setError('Invalid password');
+        setError(result.error || 'Login failed');
       }
     } catch (err) {
       setError('An error occurred. Please try again.');
@@ -32,8 +30,7 @@ const AdminLogin = () => {
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('adminAuth');
-    localStorage.removeItem('adminLoginTime');
+    adminApi.logout();
     setPassword('');
   };
 
