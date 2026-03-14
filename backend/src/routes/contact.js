@@ -48,7 +48,12 @@ router.post('/admin/login', (req, res) => {
     return res.status(400).json({ success: false, error: 'Password is required' });
   }
 
-  const adminPassword = process.env.ADMIN_PASSWORD || 'admin123';
+  const adminPassword = process.env.ADMIN_PASSWORD;
+
+  if (!adminPassword) {
+    console.error('ADMIN_PASSWORD environment variable is not set');
+    return res.status(500).json({ success: false, error: 'Server configuration error' });
+  }
 
   if (password === adminPassword) {
     // Generate a simple token (in production, use JWT)

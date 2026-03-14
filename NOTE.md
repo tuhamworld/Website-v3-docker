@@ -45,15 +45,17 @@ The `docker-compose.yml` runs three services:
 ```
 POSTGRES_HOST=db
 POSTGRES_USER=postgres
-POSTGRES_PASSWORD=postgres
+POSTGRES_PASSWORD=<your_strong_password>
 POSTGRES_DB=portfolio_db
 DB_HOST=db
 DB_USER=postgres
-DB_PASSWORD=postgres
+DB_PASSWORD=<your_strong_password>
 DB_NAME=portfolio_db
 DB_PORT=5432
 PORT=5000
 ```
+
+> **Security note**: Replace `<your_strong_password>` with actual strong passwords. Never commit real passwords to version control.
 
 ## Commands
 
@@ -157,14 +159,14 @@ docker-compose up --build
 5. Check data with: `docker-compose exec db psql -U postgres -d portfolio_db -c "SELECT * FROM contacts;"`
 
 ## Admin Authentication
-- **Password Location**: `backend/.env` - `ADMIN_PASSWORD=hello@world`
+- **Password Location**: `backend/.env` - `ADMIN_PASSWORD=<your_secure_password>`
 - **Login Endpoint**: `POST /api/admin/login`
 - **Token Verification**: `GET /api/admin/verify` (requires Bearer token)
 - **Messages Access**: `GET /api/messages` (requires Bearer token)
 
 ### Change Admin Password
 1. Edit `backend/.env`
-2. Change `ADMIN_PASSWORD=your_new_password`
+2. Change `ADMIN_PASSWORD=your_new_secure_password`
 3. Rebuild: `docker-compose down && docker-compose up --build -d`
 
 ## Security

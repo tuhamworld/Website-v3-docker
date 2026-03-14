@@ -25,11 +25,8 @@ const Contact = () => {
     e.preventDefault();
     setStatus({ loading: true, success: false, error: '' });
     try {
-      // Use backend service name when in Docker, localhost for local dev
-      const backendUrl = window.location.hostname === 'localhost' 
-        ? 'http://localhost:5000/api/contact'
-        : 'http://backend:5000/api/contact';
-      const res = await fetch(backendUrl, {
+      // Use relative path - Nginx will proxy to backend
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
