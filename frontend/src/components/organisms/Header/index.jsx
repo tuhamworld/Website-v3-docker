@@ -30,7 +30,7 @@ const Header = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          Front-end Engineer x Web Creator
+          Software Engineer(FE) x Web Creator
         </motion.h5>
 
         <motion.div

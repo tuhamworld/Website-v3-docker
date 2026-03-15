@@ -32,7 +32,7 @@ const Intro = () => {
           </div>
 
           <p>
-            Front-end engineer, driven by 2+ years of continous learning and building, and over 5 years in the field of Web Creation.
+            Frontend engineer, driven by 3+ years of continous learning and building, and over 5 years in the field of Web Creation.
             <br />
             - Built a portfolio of diverse projects, from single-page apps to interactive web apps.
             <br />
