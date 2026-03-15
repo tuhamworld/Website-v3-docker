@@ -9,13 +9,18 @@ This is a **portfolio website** built with:
 
 ## Project Structure
 ```
-Website-v2/
-├── frontend/           # React Vite app (port 80)
-├── backend/            # Express.js API (port 5000)
+Website-v3-docker/
+├── frontend/           # React Vite app (served on port 80 via Nginx)
+├── backend/            # Express.js API (internal port 80, proxied via Nginx)
 ├── docker-compose.yml  # Orchestrates all services
 ├── init.sql           # Database initialization script
 ├── .env               # Environment variables
-└── README.md          # Original documentation
+├── .env.example       # Environment variables template
+├── .dockerignore      # Docker build exclusions
+├── .github/           # GitHub Actions workflows
+├── Deploy.md          # Azure deployment guide
+├── NOTE.md            # This documentation
+└── README.md          # Project overview
 ```
 
 ## Docker Setup
@@ -25,37 +30,39 @@ The `docker-compose.yml` runs three services:
 
 1. **PostgreSQL Database (postgres-db)**
    - Image: postgres:15
-   - Port: 5432 (internal)
+   - Port: 5432 (internal only)
    - Initializes with `init.sql` on first run
    - Persists data in `postgres_data` volume
 
 2. **Express Backend (express-backend)**
    - Builds from `./backend/Dockerfile`
-   - Port: 5000 (exposed)
+   - Port: 80 (internal only, not exposed to host)
    - Connects to database via `db` service name
    - Runs: `node src/server.js`
 
 3. **React Frontend (react-frontend)**
    - Builds from `./frontend/Dockerfile`
-   - Port: 80 (exposed)
-   - Served via Nginx
-   - Communicates with backend at `http://backend:5000`
+   - Port: 80 (exposed to host)
+   - Served via Nginx with reverse proxy
+   - Proxies `/api` requests to `http://backend:80/api`
 
 ### Environment Variables (.env)
 ```
 POSTGRES_HOST=db
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=<your_strong_password>
-POSTGRES_DB=portfolio_db
+POSTGRES_DB=portfolio
 DB_HOST=db
 DB_USER=postgres
 DB_PASSWORD=<your_strong_password>
-DB_NAME=portfolio_db
+DB_NAME=portfolio
 DB_PORT=5432
-PORT=5000
+POSTGRES_HOST_AUTH_METHOD=trust
+PORT=80
+ADMIN_PASSWORD=<your_secure_password>
 ```
 
-> **Security note**: Replace `<your_strong_password>` with actual strong passwords. Never commit real passwords to version control.
+> **Security note**: Replace `<your_strong_password>` and `<your_secure_password>` with actual strong passwords. Never commit real passwords to version control.
 
 ## Commands
 
@@ -87,8 +94,8 @@ docker-compose logs -f frontend
 
 ### Access Services
 - **Frontend**: http://localhost or http://localhost:80
-- **Backend API**: http://localhost:5000
-- **Database**: localhost:5432 (requires psql client)
+- **Backend API**: http://localhost/api (proxied through Nginx)
+- **Database**: localhost:5432 (internal only, requires psql client)
 
 ## Database
 
@@ -96,23 +103,23 @@ docker-compose logs -f frontend
 
 #### Using Docker Compose
 ```bash
-docker-compose exec db psql -U postgres -d portfolio_db -c "SELECT * FROM contacts;"
+docker-compose exec db psql -U postgres -d portfolio -c "SELECT * FROM contacts;"
 ```
 
 #### Using psql directly (if PostgreSQL is installed locally)
 ```bash
-psql -h localhost -U postgres -d portfolio_db -c "SELECT * FROM contacts;"
-# When prompted, enter password: postgres
+psql -h localhost -U postgres -d portfolio -c "SELECT * FROM contacts;"
+# When prompted, enter password: <your_DB_PASSWORD>
 ```
 
 #### View all contacts with formatted output
 ```bash
-docker-compose exec db psql -U postgres -d portfolio_db -c "SELECT id, name, email, created_at FROM contacts ORDER BY created_at DESC;"
+docker-compose exec db psql -U postgres -d portfolio -c "SELECT id, name, email, created_at FROM contacts ORDER BY created_at DESC;"
 ```
 
 #### Delete/Clear contacts (if needed)
 ```bash
-docker-compose exec db psql -U postgres -d portfolio_db -c "DELETE FROM contacts;"
+docker-compose exec db psql -U postgres -d portfolio -c "DELETE FROM contacts;"
 ```
 
 ### Database Schema
@@ -135,9 +142,6 @@ CREATE TABLE contacts (
 
 ### Port Already in Use
 ```bash
-# Find process using port 5000
-lsof -i :5000
-
 # Find process using port 80
 lsof -i :80
 
@@ -153,10 +157,10 @@ docker-compose up --build
 
 ## Contact Form Workflow
 1. User fills form on frontend (name, email, message)
-2. Frontend sends POST request to `http://backend:5000/api/contact`
+2. Frontend sends POST request to `/api/contact` (proxied by Nginx to backend)
 3. Backend validates data and inserts into PostgreSQL
 4. Returns success/error message to frontend
-5. Check data with: `docker-compose exec db psql -U postgres -d portfolio_db -c "SELECT * FROM contacts;"`
+5. Check data with: `docker-compose exec db psql -U postgres -d portfolio -c "SELECT * FROM contacts;"`
 
 ## Admin Authentication
 - **Password Location**: `backend/.env` - `ADMIN_PASSWORD=<your_secure_password>`

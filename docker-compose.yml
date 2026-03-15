@@ -16,7 +16,7 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    image: tuhamworld/portfolio-backend:1.0
+    image: tuhamworld/portfolio-backend:1.3
     container_name: express-backend
     restart: always
     env_file:
@@ -34,7 +34,7 @@ services:
       dockerfile: Dockerfile
       args:
         VITE_API_URL: /api
-    image: tuhamworld/portfolio-frontend:1.0
+    image: tuhamworld/portfolio-frontend:1.3
     container_name: react-frontend
     restart: always
     environment:
